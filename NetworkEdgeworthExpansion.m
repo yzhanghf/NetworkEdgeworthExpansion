@@ -1,4 +1,4 @@
-function [EdgeworthCDFValues, EdgeworthCI] = Our_method(A, MotifName, opts)
+function [EdgeworthCDFValues, EdgeworthCI] = NetworkEdgeworthExpansion(A, MotifName, opts)
 	
 	StdNormal  = opts.StdNormal;
 	TestPoints = opts.TestPoints;
