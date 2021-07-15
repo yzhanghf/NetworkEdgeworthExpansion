@@ -2,10 +2,14 @@
 function output = Motif(A, xi1, MotifName)
 	
 	% REF: Zhang & Xia: Edgeworth expansions for network moments, arxiv:2004.06615
+	% CONTACT: yzhanghf@stat.osu.edu, madxia@ust.hk
 	% How to use:
 	% MotifName = {'Edge','Triangle','Vshape','ThreeStar'}
 	% xi1 = {0,1,2};
-	%     0: compute U-hat; 1: compute G_1-hat; 2: compute G_2-hat
+	%     0: compute U-hat, output is a scalar;
+	%     1: compute G_1-hat, output is a vector;
+	%     2: compute G_2-hat, output is a matrix;
+	% Warning: programmed for symmetric (undirected) $A$ with potentially weighted edges.
 	
 	if(~exist('xi1','var'))
 		xi1 = 0; 
