@@ -1,5 +1,21 @@
 function [EdgeworthCDFValues, EdgeworthCI] = NetworkEdgeworthExpansion(A, MotifName, opts)
 	
+	% REF: Zhang & Xia: Edgeworth expansions for network moments, arxiv:2004.06615
+	% CONTACT: yzhanghf@stat.osu.edu, madxia@ust.hk
+	% How to use:
+	% MotifName = {'Edge','Triangle','Vshape','ThreeStar'}
+	% opts:
+	%     1. Set "opts.Stdnormal = makedist('normal', 'mu', 0, 'sigma', 1);"
+	%          or any other limiting distribution to your belief
+	%     2. Set "opts.TestPoints = TestPoints  = -2:0.1:2;"
+	%          or any other grid of points to approximately evaluate the K-S distance
+	%     3. Set "opts.r" according to your motif shape.
+	%          r(Edge)=2, r(Triangle)=r(Vshape)=3, r(ThreeStar)=4;
+	%     4. Confidence level will be 1-opts.alpha, if you only need EdgeworthCDFValues you may ignore this part
+	% OUTPUT:
+	% EdgeworthCDFValues: the estimated CDF values by empirical Edgeworth expansion (EEE) at opts.TestPoints
+	% EdgeworthCI: a length-2 vector of estimated CI bounds
+	
 	StdNormal  = opts.StdNormal;
 	TestPoints = opts.TestPoints;
 	r = opts.r;
