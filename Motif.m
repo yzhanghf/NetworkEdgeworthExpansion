@@ -1,8 +1,14 @@
 
 function output = Motif(A, xi1, MotifName)
 	
+	% REF: Zhang & Xia: Edgeworth expansions for network moments, arxiv:2004.06615
+	% How to use:
+	% MotifName = {'Edge','Triangle','Vshape','ThreeStar'}
+	% xi1 = {0,1,2};
+	%     0: compute U-hat; 1: compute G_1-hat; 2: compute G_2-hat
+	
 	if(~exist('xi1','var'))
-		xi1 = 0; % 0: compute U-hat; 1: compute G_1-hat; 2: compute G_2-hat
+		xi1 = 0; 
 	end
 	n = size(A,1);
 	
