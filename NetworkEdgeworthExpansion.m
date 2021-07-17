@@ -6,7 +6,6 @@ function [EdgeworthCDFValues, EdgeworthCI] = NetworkEdgeworthExpansion(A, MotifN
 	% MotifName = {'Edge','Triangle','Vshape','ThreeStar'}
 	% opts:
 	%     1. Set "opts.Stdnormal = makedist('normal', 'mu', 0, 'sigma', 1);"
-	%          or any other limiting distribution to your belief
 	%     2. Set "opts.TestPoints = TestPoints  = -2:0.1:2;"
 	%          or any other grid of points to approximately evaluate the K-S distance
 	%     3. Set "opts.r" according to your motif shape.
