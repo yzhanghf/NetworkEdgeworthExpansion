@@ -13,6 +13,6 @@ How to cite:
   title={Edgeworth expansions for network moments},
   author={Zhang, Yuan and Xia, Dong},
   journal={The Annals of Statistics, (In press)},
-  year={2020+}
+  year={2021+}
 }
 ```
