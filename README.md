@@ -9,7 +9,7 @@ Link:  https://www.e-publications.org/ims/submission/AOS/user/submissionFile/456
 
 How to cite:
 ```bibtex
-@article{zhang2020edgeworth,
+@article{zhang2022edgeworth,
     AUTHOR = {Yuan Zhang and Dong Xia},
      TITLE = {Edgeworth expansions for network moments},
    JOURNAL = {Ann. Statist.},
